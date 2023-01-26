@@ -32,13 +32,13 @@ def has_signature(comment: GithubComment, slug: str) -> bool:
 
 
 def get_comments_link(pr_number: int) -> str:
-    url = f"/repos/strawberry-graphql/strawberry/issues/{pr_number}/comments"
+    url = f"/repos/nrbnlulu/qtgql/issues/{pr_number}/comments"
 
     return API_BASE + url
 
 
 def get_labels_link(pr_number: int) -> str:
-    url = f"/repos/strawberry-graphql/strawberry/issues/{pr_number}/labels"
+    url = f"/repos/nrbnlulu/qtgql/issues/{pr_number}/labels"
 
     return API_BASE + url
 
