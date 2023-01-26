@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "qtgql-github-bot"
+version = "0.1.0"
+description = ""
+authors = ["Nir <nrbnlulu@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+strawberry-graphql = "^0.155.2"
+uvicorn = "^0.13.3"
+starlette = "^0.14.1"
+httpx = "^0.16.1"
+
+[tool.poetry.dev-dependencies]
+taskipy = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+include_trailing_comma = true
+use_parentheses = true
+ensure_newline_before_comments = true
+force_grid_wrap = 0
+line_length = 88
+multi_line_output = 3
+
+[tool.taskipy.tasks]
+server = "GITHUB_TOKEN=demo poetry run python main.py --reload"
